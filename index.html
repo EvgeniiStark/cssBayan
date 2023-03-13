@@ -1,0 +1,144 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+	 .imgsize{
+            width: 200px; 
+            height:200px; 
+			display: block;
+			margin-left: auto;
+			margin-right: auto
+        }
+.acordion-container {
+	margin: 20px 0;
+	width:80%;
+	
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+}
+.acordion-container .acordion-body {
+	width: calc(100% - 40px);
+	margin: 0 auto;
+	height: 0;
+	color: rgba(0, 0, 0, 0);
+	background-color: #FFF;
+	line-height: 18px;
+	padding: 0 30px;
+	box-sizing: border-box;
+	transition: color 0.5s, padding 0.5s;
+	overflow: hidden;
+	font-family: Verdana, sans-serif; 
+	font-size: 16px;
+}
+.acordion-container .acordion-body p {
+	margin: 0 0 10px;
+}
+.acordion-container label {
+	cursor: pointer;
+	background-color: blue;
+	display: block;
+	padding: 15px 20px;
+	width: 100%;
+	color: #000;
+	font-weight: 300;
+	box-sizing: border-box;
+	z-index: 100;
+	font-family: Verdana, sans-serif;   
+	font-size: 18px;
+	margin: 0 0 5px;
+	transition: color .35s;
+}
+.acordion-container label:hover {
+    color: #FFF;
+}
+.acordion-container input{
+	display: none;
+}
+.acordion-container:hover label:before {
+	content: '\002B';
+	float: right;
+}
+.acordion-container input:hover:not(:checked)   + label  {
+	background-color: blue;
+    color: #FFF;
+}
+.acordion-container input:hover:not(:checked) + label:before {
+    transition: transform .35s;
+    transform: rotate(45deg);
+}
+.acordion-container input:hover:not(:checked) + label + .acordion-body {
+	height: auto;
+	margin-top: -5px;
+	color: #000;
+	padding: 20px 30px 10px;
+}
+
+
+ .acordion-container input:checked  + label  {
+    color: #FFF;
+}
+.acordion-container input:checked + label:before {
+    transition: transform .35s;
+    transform: rotate(45deg);
+}
+.acordion-container input:checked + label + .acordion-body {
+	height: auto;
+	margin-top: -5px;
+	color: #000;
+	padding: 20px 30px 10px;
+}
+
+
+
+    </style>
+
+</head>
+
+<body>
+<h1>CSS Bayan</h1>
+<div class="acordion-container"> 
+    
+    <input type="checkbox" name="acordion" id="acordion1" checked="checked" />
+    <label for="acordion1">You can't just copy and paste CSS</label>
+    <div class="acordion-body">
+        <p><img class="imgsize" src="mem.jpg" alt="mem"></p>
+    </div>
+    
+    <input type="checkbox" name="acordion" id="acordion2" />
+    <label for="acordion2">Keep calm and carry on</label>
+    <div class="acordion-body">
+        <p><img class="imgsize" src="mem.jpg" alt="mem"></p>
+    </div>
+    
+    <input type="checkbox" name="acordion" id="acordion3" />
+    <label for="acordion3">Work-life balance</label>
+    <div class="acordion-body">
+        <p><img class="imgsize" src="mem.jpg" alt="mem"></p>
+    </div> 
+	
+	<input type="checkbox" name="acordion" id="acordion4" />
+    <label for="acordion4">Dude, where is JS?</label>
+    <div class="acordion-body">
+        <p><img class="imgsize" src="mem.jpg" alt="mem"></p>
+    </div> 
+    
+	<input type="checkbox" name="acordion" id="acordion5" />
+    <label for="acordion5">Relax and take it easy</label>
+    <div class="acordion-body">
+        <p><img class="imgsize" src="mem.jpg" alt="mem"></p>
+    </div> 
+    
+</div>
+
+
+</body>
+</html>
+
+
+
+
+
