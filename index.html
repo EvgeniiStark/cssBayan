@@ -25,11 +25,10 @@
 	margin: 0 auto;
 	height: 0;
 	color: rgba(0, 0, 0, 0);
-	background-color: #FFF;
 	line-height: 18px;
 	padding: 0 30px;
 	box-sizing: border-box;
-	transition: color 0.5s, padding 0.5s;
+	transition: color 0.2s, padding 0.2s;
 	overflow: hidden;
 	font-family: Verdana, sans-serif; 
 	font-size: 16px;
@@ -39,7 +38,7 @@
 }
 .acordion-container label {
 	cursor: pointer;
-	background-color: blue;
+	background-color: #e6e6fa;
 	display: block;
 	padding: 15px 20px;
 	width: 100%;
@@ -53,7 +52,7 @@
 	transition: color .35s;
 }
 .acordion-container label:hover {
-    color: #FFF;
+    color: #6767e0;
 }
 .acordion-container input{
 	display: none;
@@ -63,23 +62,32 @@
 	float: right;
 }
 .acordion-container input:hover:not(:checked)   + label  {
-	background-color: blue;
-    color: #FFF;
+	background-color: #e6e6fa;
+    color: #6767e0;
+	 -webkit-transition: all .2s;
+    -moz-transition: all .2s;
+    transition: all .2s;
 }
 .acordion-container input:hover:not(:checked) + label:before {
     transition: transform .35s;
     transform: rotate(45deg);
+	 -webkit-transition: all .2s;
+    -moz-transition: all .2s;
+    transition: all .2s;
 }
 .acordion-container input:hover:not(:checked) + label + .acordion-body {
 	height: auto;
 	margin-top: -5px;
-	color: #000;
+	color: #6767e0;
 	padding: 20px 30px 10px;
+	 -webkit-transition: all .2s;
+    -moz-transition: all .2s;
+    transition: all .2s;
 }
 
 
  .acordion-container input:checked  + label  {
-    color: #FFF;
+    color: #000;
 }
 .acordion-container input:checked + label:before {
     transition: transform .35s;
@@ -88,7 +96,7 @@
 .acordion-container input:checked + label + .acordion-body {
 	height: auto;
 	margin-top: -5px;
-	color: #000;
+	color: #6767e0;
 	padding: 20px 30px 10px;
 }
 
